@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<title>lab 2</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="/lab3lib/static/bootstrap.min.css">
+		<script src="/lab3lib/static/jquery.min.js"></script>
+		<script src="/lab3lib/static/scripts.js"></script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">Library</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/readers">Readers</a></li>
+						<li><a href="/librariers">Librariers</a></li>
+						<li><a href="/books">Books</a></li>
+						<li><a href="/extradition">Extradition</a></li>
+					</ul>
+				</div><!--/ nav -->
+			</div>
+		</div>
+		<div style="margin-top: 100px" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Readers name</th>	
+								<th>Surname</th>
+								<th>delete</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in table %}
+								<tr class="{{ row.id }}">
+									<td><span class="name">{{ row.name }}</span></td>
+									<td><span class="surname">{{ row.surname }}</span></td>
+									<td><a href="http://localhost:8000/readers-del/?id={{ row.id }}" id="delete-{{ row.id }}" class="readers-btn-link">delete</a></td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div><!-- / table -->
+			<div class="row">
+				<div class="col-md-12">
+					<form id="readers_add" role="form">
+						<input type="text" name="name" class="name form-control input-md" placeholder="Readers name">
+						<input type="text" name="surname" class="surname form-control input-md" placeholder="Surname">
+						<button type="button" class="readers_add btn btn-primary btn-lg btn-block">Add new Reader</button>
+					</form>
+				</div>
+			</div><!-- / form -->
+		</div><!-- / container -->
+	</body>
+</html>

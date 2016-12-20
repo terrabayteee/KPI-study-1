@@ -1,0 +1,27 @@
+{
+	"librariers": [
+		{"name": "librarier1", "surname": "Surname1"},
+		{"name": "librarier2", "surname": "Surname2"},
+		{"name": "librarier3", "surname": "Surname3"}
+	],
+	"readers": [
+		{"name": "reader1", "surname": "Surname1"},
+		{"name": "reader2", "surname": "Surname2"},
+		{"name": "reader3", "surname": "Surname3"}
+	],
+	"books": [
+		{"book": "Book1", "author": "Author1"},
+		{"book": "Book2", "author": "Author2"},
+		{"book": "Book3", "author": "Author3"},
+		{"book": "Book4", "author": "Author4"}
+	],
+	"extradition": [
+		{"reader_id": "1", "cart_id": "1", "librarier_id": "1", "issued_date": "5.07.2016"},
+		{"reader_id": "2", "cart_id": "2", "librarier_id": "2", "issued_date": "11.12.2016"}
+	],
+	"cart": [
+		{"cart_id": "1", "book_id": "4"},
+		{"cart_id": "1", "book_id": "2"},
+		{"cart_id": "2", "book_id": "1"}
+	]
+}

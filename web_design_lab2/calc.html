@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript calculator</title>
+	<link rel="stylesheet" href="css/cmain.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		
+		<div class="container">
+			
+			<div class="navbar-header">
+				
+				<a class="navbar-brand" href="#">Calculator</a>
+			
+			</div>
+		
+		</div>
+	
+	</div>
+
+
+	<div class="container-fluid" id="calculator">
+
+		<div class="row-centered">
+
+			<div class="col-lg-4 col-lg-offset-5">
+
+			<form class="form-horizontal" name="calculator">
+
+  				<div class="control-group">
+
+    				<div class="controls">
+
+      					<input id="screen" type="text" name="screen" disabled>
+      					<hr>
+
+    				</div>
+
+  				</div>
+
+
+  				<div class="control-group">
+
+    				<div class="controls">
+
+      					<input class="buttons" type="button" value="&radic;" onclick="calculator.screen.value = Math.sqrt(calculator.screen.value)">
+
+						<input class="buttons" type="button" value="^" onclick="calculator.screen.value = Math.pow(calculator.screen.value, 2)">
+
+						<input class="buttons" type="button" value="C" onclick="calculator.screen.value = ''">
+
+						<input class="buttons" type="button" value="&larr;" onclick="calculator.screen.value = calculator.screen.value.slice(0,-1)"> 
+
+    				</div>
+
+  				</div>
+
+  				<div class="control-group">
+
+    				<div class="controls">
+
+      					<input class="buttons" type="button" value="7" onclick="calculator.screen.value += '7'">
+
+						<input class="buttons" type="button" value="8" onclick="calculator.screen.value += '8'">
+
+						<input class="buttons" type="button" value="9" onclick="calculator.screen.value += '9'">
+
+						<input class="buttons" type="button" value="+" onclick="calculator.screen.value += '+'">
+
+    				</div>
+
+  				</div>
+
+
+  				<div class="control-group">
+
+    				<div class="controls">
+
+      					<input class="buttons" type="button" value="4" onclick="calculator.screen.value += '4'">
+
+						<input class="buttons" type="button" value="5" onclick="calculator.screen.value += '5'">
+
+						<input class="buttons" type="button" value="6" onclick="calculator.screen.value += '6'">
+
+						<input class="buttons" type="button" value="-" onclick="calculator.screen.value += '-'">
+
+    				</div>
+
+  				</div>
+
+
+  				<div class="control-group">
+
+    				<div class="controls">
+
+      					<input class="buttons" type="button" value="1" onclick="calculator.screen.value += '1'">
+
+						<input class="buttons" type="button" value="2" onclick="calculator.screen.value += '2'">
+
+						<input class="buttons" type="button" value="3" onclick="calculator.screen.value += '3'">
+
+						<input class="buttons" type="button" value="*" onclick="calculator.screen.value += '*'">
+
+    				</div>
+
+  				</div>
+
+
+  				<div class="control-group">
+
+    				<div class="controls">
+
+      					<input class="buttons" type="button" value="0" onclick="calculator.screen.value += '0'">
+
+						<input class="buttons" type="button" value="." onclick="calculator.screen.value += '.'">
+
+						<input class="buttons" type="button" value="=" onclick="calculator.screen.value = eval(calculator.screen.value)">
+
+						<input class="buttons" type="button" value="/" onclick="calculator.screen.value += '/'">
+
+    				</div>
+
+  				</div>
+
+
+			</form>	
+
+			</div>
+
+		</div>
+		<div class="clearfix"></div>
+
+		<footer class="footer">
+			<div class="container">
+				<p class="copyright-name">Done by Buts Yaroslav <br> <span class = "copyright-name">kv-42 </span> </p>
+			</div>
+		</footer>
+		
+	</div>
+</body>
+</html>
